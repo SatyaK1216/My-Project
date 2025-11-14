@@ -37,6 +37,8 @@ function App() {
             <div>
               <label>Username:</label>
               <input
+                id="username"
+                data-testid="username-input"
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
@@ -45,13 +47,15 @@ function App() {
             <div>
               <label>Password:</label>
               <input
+                id="password"
+                data-testid="password-input"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             {error && <p className="error">{error}</p>}
-            <button type="submit">Login</button>
+            <button id="loginBtn" data-testid="login-button" type="submit">Login</button>
           </form>
         </div>
       ) : (
